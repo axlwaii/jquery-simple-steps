@@ -1,0 +1,69 @@
+<html>
+  <head>
+    <title>Jquery Simple Steps</title>
+    <script src="js/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="css/foundation.min.css" />
+    <script src="../build/jquery-simple-steps.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('#simple-steps').simpleSteps();
+      });
+    </script>
+  </head>
+  <body>
+
+    <nav class="top-bar">
+    <ul class="title-area">
+      <li class="name">
+      <h1><a href="#">Simple Steps</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+    </ul>
+    </nav>
+
+    <div class="row">
+      <div class="tree columns offset-by-two" id="simple-steps">
+        <form action="">
+          <fieldset>
+            <legend>Register</legend>
+
+            <div class="row">
+
+              <div class="large-4 columns step">
+                <label>Name *required</label>
+                <input name="Name" class="validate presence" type="text" placeholder="large-4.columns">
+                <button class="right button small next-step-button">Next</button>
+              </div>
+
+              <div class="large-4 columns push-4 step">
+                <label>Text</label>
+                <input class="validate" type="text" placeholder="large-4.columns">
+                <button class="left button small prev-step-button">Previous</button>
+                <button class="right button small next-step-button">Next</button>
+              </div>
+
+              <div class="large-4 columns step">
+                <div class="row collapse">
+                  <label>email</label>
+                  <div class="small-9 columns">
+                    <input type="text" placeholder="small-9.columns">
+                  </div>
+                  <div class="small-3 columns">
+                    <span class="postfix">.com</span>
+                  </div>
+                </div>
+                <button class="left button small prev-step-button">Previous</button>
+                <button class="right button small next-step-button">Submit</button>
+              </div>
+
+            </div>
+            <div class="step">
+              <h1>thanks for submitting :) </h1>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
