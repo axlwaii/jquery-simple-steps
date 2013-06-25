@@ -1,0 +1,12 @@
+{
+  "name": "jquery-simple-steps",
+  "description": "Minimal, light-weight jQuery step by step plugin.",
+  "version": "0.1.0",
+  "main": "./src/jquery-simple-steps",
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "jsdom": "*",
+    "jquery": "*"
+  }
+}
