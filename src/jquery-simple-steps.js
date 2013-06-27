@@ -23,7 +23,12 @@
       nextStep();
     }
 
-    function nextStep() {
+    function nextStep(dir){
+      $(steps[currentStep]).hide();
+      currentStep += dir;
+      $(steps[currentStep]).fadeIn(options.animationSpeed);
+    }
+
       var i;
       for(i=0; i < steps.length; i++){
         if( i !== currentStep){
@@ -52,16 +57,15 @@
     $('.next-step-button').on('click', function(e){
       var key;
       for(key in validations){
-        if(validations[key](steps[currentStep-1])){
-          nextStep();
+        if(validations[key](steps[currentStep])){
+          nextStep(1);
         }
       }
       return false;
     });
 
     $('.prev-step-button').on('click',function(){
-      currentStep -= 2;
-      nextStep();
+      nextStep(-1);
       return false;
     });
 
