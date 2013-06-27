@@ -19,8 +19,9 @@
     nextButtons = $('.next-step-button');
 
     function init(){
-      steps = $(stepsContainer).find('.step');
-      nextStep();
+      steps = $(stepsContainer).find(options.stepClass);
+      hideSteps();
+      $(steps).first().show();
     }
 
     function nextStep(dir){
@@ -29,15 +30,13 @@
       $(steps[currentStep]).fadeIn(options.animationSpeed);
     }
 
+    function hideSteps() {
       var i;
       for(i=0; i < steps.length; i++){
         if( i !== currentStep){
           $(steps[i]).hide();
-        }else {
-          $(steps[i]).show('slow');
         }
       }
-      currentStep += 1;
     }
 
     function validatePresence(element){
