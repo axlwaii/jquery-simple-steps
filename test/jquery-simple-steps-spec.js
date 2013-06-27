@@ -17,11 +17,11 @@ describe('simple steps on init', function(){
   });
 
   it('should show first step', function(){
-    expect($($('.step')[0]).attr('style')).to.not.include('display: none');
+    expect($('.step').first().attr('style')).to.not.include('display: none');
   });
 
   it('should hide other steps', function() {
-    expect($($('.step')[1]).attr('style')).to.include('display: none');
+    expect($('.step').first().next().attr('style')).to.include('display: none');
   });
 
 });
