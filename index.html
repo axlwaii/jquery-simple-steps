@@ -11,34 +11,76 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="javascripts/jquery.simpleSteps.min.js"></script>
+    <script src="javascripts/main.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <header>
-        <h1>Jquery Simple Steps</h1>
-        <p>multi step plugin to shrink forms or documents</p>
+      <h1>Jquery Simple Steps</h1>
+      <p>multi step plugin to shrink forms or documents</p>
 
-        <p class="view"><a href="https://github.com/axlwaii/jquery-simple-steps">View the Project on GitHub <small>axlwaii/jquery-simple-steps</small></a></p>
+      <p class="view"><a href="https://github.com/axlwaii/jquery-simple-steps">View the Project on GitHub <small>axlwaii/jquery-simple-steps</small></a></p>
 
-
-        <ul>
-          <li><a href="https://github.com/axlwaii/jquery-simple-steps/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/axlwaii/jquery-simple-steps/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/axlwaii/jquery-simple-steps">View On <strong>GitHub</strong></a></li>
-        </ul>
+      <ul>
+        <li><a href="https://github.com/axlwaii/jquery-simple-steps/zipball/master">Download <strong>ZIP File</strong></a></li>
+        <li><a href="https://github.com/axlwaii/jquery-simple-steps/tarball/master">Download <strong>TAR Ball</strong></a></li>
+        <li><a href="https://github.com/axlwaii/jquery-simple-steps">View On <strong>GitHub</strong></a></li>
+      </ul>
       </header>
       <section>
-        <h1>
-<a name="jquery-simple-steps" class="anchor" href="#jquery-simple-steps"><span class="octicon octicon-link"></span></a>jQuery Simple Steps</h1>
+      <h1>
+        <a name="jquery-simple-steps" class="anchor" href="#jquery-simple-steps"><span class="octicon octicon-link"></span></a>jQuery Simple Steps</h1>
 
-<p>Sometimes you might want to display informations step by step.</p>
+      <p>Sometimes you might want to display informations step by step.</p>
 
-<h2>
-<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+      <div id="simple-steps">
+        <form action="">
+          <fieldset>
+            <legend>Example</legend>
 
-<p>Basic html:</p>
+            <div class="step">
+              <label>Name *required</label>
+              <input name="Name" class="validate presence" type="text" placeholder="with basic validation">
+              <button class="right button small next-step-button">Next</button>
+            </div>
 
-<div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"your-steps-container"</span><span class="nt">&gt;</span>
+            <div class="step">
+              <label>Text</label>
+              <input class="validate" type="text" placeholder="Text">
+              <div class="btn-group">
+                <button class="left button small prev-step-button">Previous</button>
+                <button class="right button small next-step-button">Next</button>
+              </div>
+            </div>
+
+            <div class="step">
+              <label>email</label>
+              <input type="text" placeholder="email">
+
+              <div class="btn-group">
+                <button class="left button small prev-step-button">Previous</button>
+                <button class="right button small next-step-button">Submit</button>
+              </div>
+            </div>
+
+            <div class="step">
+              <h1>thanks for submitting :) </h1>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+
+
+
+
+      <h2>
+        <a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+      <p>Basic html:</p>
+
+      <div class="highlight"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"your-steps-container"</span><span class="nt">&gt;</span>
   // each step needs to have a step class
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h1&gt;</span> This is the first Step <span class="nt">&lt;/h1&gt;</span>
@@ -60,28 +102,28 @@
 <span class="nt">&lt;/div&gt;</span>
 </pre></div>
 
-<p>Initialize with:</p>
+      <p>Initialize with:</p>
 
-<div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#your-steps-container'</span><span class="p">).</span><span class="nx">simpleSteps</span><span class="p">();</span>
+      <div class="highlight"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#your-steps-container'</span><span class="p">).</span><span class="nx">simpleSteps</span><span class="p">();</span>
 </pre></div>
 
-<h2>
-<a name="license---the-mit-license-mit" class="anchor" href="#license---the-mit-license-mit"><span class="octicon octicon-link"></span></a>License - The MIT License (MIT)</h2>
+      <h2>
+        <a name="license---the-mit-license-mit" class="anchor" href="#license---the-mit-license-mit"><span class="octicon octicon-link"></span></a>License - The MIT License (MIT)</h2>
 
-<p>Copyright (c) 2013 Markus Waitl</p>
+      <p>Copyright (c) 2013 Markus Waitl</p>
 
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+      <p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
 
-<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+      <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
       </section>
       <footer>
-        <p>This project is maintained by <a href="https://github.com/axlwaii">axlwaii</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      <p>This project is maintained by <a href="https://github.com/axlwaii">axlwaii</a></p>
+      <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
     <script src="javascripts/scale.fix.js"></script>
-    
+
   </body>
 </html>
