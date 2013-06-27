@@ -7,24 +7,24 @@ Usage
 Basic html:
 ```html
 <div id="your-steps-container">
-// each step needs to have a step class
-<div class="step">
-<h1> This is the first Step </h1>
+  // each step needs to have a step class
+  <div class="step">
+    <h1> This is the first Step </h1>
 
-// next step gets triggered by click on next-step-button class
-<button class="right button small next-step-button">Next</button>
-</div>
-<div class="step">
-<h1> This is the second Step </h1>
+    // next step gets triggered by click on next-step-button class
+    <button class="right button small next-step-button">Next</button>
+  </div>
+  <div class="step">
+    <h1> This is the second Step </h1>
 
-// previous step gets triggered by click on prev-step-button class
-<button class="left button small prev-step-button">Previous</button>
-<button class="right button small next-step-button">Next</button>
-</div>
-<div class="step">
-<h1> This is the last Step </h1>
-<button class="left button small prev-step-button">Previous</button>
-</div>
+    // previous step gets triggered by click on prev-step-button class
+    <button class="left button small prev-step-button">Previous</button>
+    <button class="right button small next-step-button">Next</button>
+  </div>
+  <div class="step">
+    <h1> This is the last Step </h1>
+    <button class="left button small prev-step-button">Previous</button>
+  </div>
 </div>
 ```
 
