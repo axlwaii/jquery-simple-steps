@@ -1,7 +1,13 @@
 /* Version 0.1.0 */
 (function($){
-  $.fn.simpleSteps = function (){
+  $.fn.simpleSteps = function (options){
+    options = $.extend({
+      stepClass           : '.step',
+      animationSpeed      : 500
+    }, options);
+
     var stepsContainer = this;
+
     var currentStep, nextButtons, steps, validations;
 
     currentStep = 0;
