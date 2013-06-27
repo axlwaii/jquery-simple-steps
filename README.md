@@ -30,7 +30,7 @@ Basic html:
 
 Initialize with:
 ```javascript
-$('your-steps-container').simpleSteps();
+$('#your-steps-container').simpleSteps();
 ```
 
 License - The MIT License (MIT)
