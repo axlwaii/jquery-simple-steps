@@ -2,6 +2,43 @@
 
 Sometimes you might want to display informations step by step.
 
+Example
+-------
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script src="http://axlwaii.github.io/jquery-simple-steps/javascripts/jquery.simpleSteps.min.js"></script>
+<script src="http://axlwaii.github.io/jquery-simple-steps/javascripts/main.js"></script>
+
+<div id="simple-steps" style="width: 40%;">
+<form action="">
+<fieldset>
+<div class="step" style="">
+<label>Name *required</label>
+<input name="Name" type="text" placeholder="Enter Name">
+<button class="right button small next-step-button">Next</button>
+</div>
+<div class="step" style="display: none;">
+<label>Text</label>
+<input type="text" placeholder="Text">
+<div class="btn-group">
+<button class="left button small prev-step-button">Previous</button>
+<button class="right button small next-step-button">Next</button>
+</div>
+</div>
+<div class="step" style="display: none;">
+<label>email</label>
+<input class="mail" type="text" placeholder="email">
+<div class="btn-group">
+<button class="left button small prev-step-button">Previous</button>
+<button class="right button small next-step-button">Submit</button>
+</div>
+</div>
+<div class="step" style="display: none;">
+<h1>thanks for submitting :) </h1>
+</div>
+</fieldset>
+</form>
+</div>
+
 Usage
 -----
 Basic html:
