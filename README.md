@@ -9,8 +9,6 @@ Example
 <script src="http://axlwaii.github.io/jquery-simple-steps/javascripts/main.js"></script>
 
 <div id="simple-steps" style="width: 40%;">
-<form action="">
-<fieldset>
 <div class="step" style="">
 <label>Name *required</label>
 <input name="Name" type="text" placeholder="Enter Name">
@@ -35,8 +33,6 @@ Example
 <div class="step" style="display: none;">
 <h1>thanks for submitting :) </h1>
 </div>
-</fieldset>
-</form>
 </div>
 
 Usage
