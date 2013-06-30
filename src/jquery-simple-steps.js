@@ -1,4 +1,4 @@
-/* Version 0.1.0 */
+/* Version 0.1.1 */
 (function($){
   $.fn.simpleSteps = function (options){
     options = $.extend({
