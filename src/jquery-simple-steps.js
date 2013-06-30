@@ -13,7 +13,8 @@
     currentStep = 0;
 
     validations = {
-      "presence": validatePresence
+      "presence": validatePresence,
+      "email"   : validateEmail
     };
 
     nextButtons = $('.next-step-button');
@@ -39,27 +40,56 @@
       }
     }
 
+    function validateEmail(element) {
+
+      var i,re;
+      var isValid = true;
+      var elements = $(element).find('.validate.email');
+      if(elements.length > 0){
+        // from http://stackoverflow.com/a/46181/11236
+        re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        for(i=0; i < elements.length; i++){
+          $(elements[i]).removeClass('error');
+          if(!re.test(elements[i].value)){
+            isValid = false;
+            $(elements[i]).addClass('error');
+          }
+        }
+      }
+
+      return isValid;
+    }
+
+
     function validatePresence(element){
       var i;
       var elements = $(element).find('.validate.presence');
       var isValid = true;
-      for(i=0; i < elements.length; i++){
-        $(elements[i]).removeClass('error');
-        if(elements[i].value === ""){
-          isValid = false;
-          $(elements[i]).addClass('error');
+      if(elements.length > 0){
+        for(i=0; i < elements.length; i++){
+          $(elements[i]).removeClass('error');
+          if(elements[i].value === ""){
+            isValid = false;
+            $(elements[i]).addClass('error');
+          }
         }
       }
       return isValid;
     }
 
     $('.next-step-button').on('click', function(e){
-      var key;
+      var key, allValid;
+      allValid = true;
       for(key in validations){
-        if(validations[key](steps[currentStep])){
-          nextStep(1);
+        if(!validations[key](steps[currentStep])){
+          allValid = false;
         }
       }
+
+      if(allValid){
+        nextStep(1);
+      }
+
       return false;
     });
 
