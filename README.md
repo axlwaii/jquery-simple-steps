@@ -33,11 +33,15 @@ $('#your-steps-container').simpleSteps();
 ```
 Basic validations
 -----------------
-validate a value for its presence by adding the classes 'validate' and 'presence'
+Validate a value for its presence by adding the classes 'validate' and 'presence'
 ```html
 <input name="Name" class="validate presence" type="text" placeholder="with basic validation">
 ```
 
+To validate the email address add 'validate' and 'email'
+```html
+<input name="Email" class="validate email" type="text" placeholder="with email validation">
+```
 
 License - The MIT License (MIT)
 -------------------------------
