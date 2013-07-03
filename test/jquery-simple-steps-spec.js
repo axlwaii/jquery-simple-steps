@@ -32,11 +32,11 @@ describe('simple steps on next-step-button click', function(){
   });
 
   it('should hide the current step', function(){
-    expect($($('.step')[0]).attr('style')).to.include('display: none');
+    expect($('.step').first().attr('style')).to.include('display: none');
   });
 
   it('should show the  next step', function(){
-    expect($($('.step')[1]).attr('style')).to.not.include('display: none');
+    expect($('.step').first().next().attr('style')).to.not.include('display: none');
   });
 
 });
