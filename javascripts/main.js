@@ -1,3 +1,1 @@
-$(document).ready(function(){
-  $('#simple-steps').simpleSteps();
-});
+console.log('This would be the main JS file.');
