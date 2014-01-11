@@ -43,6 +43,20 @@ To validate the email address add 'validate' and 'email'
 <input name="Email" class="validate email" type="text" placeholder="with email validation">
 ```
 
+Options
+----------------
+```javascript
+$('#your-steps-container').simpleSteps({
+
+                                          animationSpeed      : 500,
+                                          nextButtons         : '.next-step-button',
+                                          prevButtons         : '.prev-step-button',
+                                          stepClass           : '.step',
+                                          stepToStart         : 0
+
+                                       });
+
+```
 License - The MIT License (MIT)
 -------------------------------
 
