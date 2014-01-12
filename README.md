@@ -6,7 +6,7 @@ Usage
 -----
 Basic html:
 ```html
-<div id="your-steps-container">
+<div id="steps-container">
   // each step needs to have a step class
   <div class="step">
     <h1> This is the first Step </h1>
@@ -29,7 +29,7 @@ Basic html:
 ```
 Initialize with:
 ```javascript
-$('#your-steps-container').simpleSteps();
+$('#steps-container').simpleSteps();
 ```
 Basic validations
 -----------------
@@ -46,15 +46,15 @@ To validate the email address add 'validate' and 'email'
 Options
 ----------------
 ```javascript
-$('#your-steps-container').simpleSteps({
+$('#steps-container').simpleSteps({
 
-                                          animationSpeed      : 500,
-                                          nextButtons         : '.next-step-button',
-                                          prevButtons         : '.prev-step-button',
-                                          stepClass           : '.step',
-                                          stepToStart         : 0
+                                    animationSpeed      : 500,
+                                    nextButtons         : '.next-step-button',
+                                    prevButtons         : '.prev-step-button',
+                                    stepClass           : '.step',
+                                    stepToStart         : 0
 
-                                       });
+                                    });
 
 ```
 License - The MIT License (MIT)
