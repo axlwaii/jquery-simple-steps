@@ -56,7 +56,7 @@
 
 <p>Basic html:</p>
 
-<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"your-steps-container"</span><span class="nt">&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"steps-container"</span><span class="nt">&gt;</span>
   // each step needs to have a step class
   <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"step"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;h1&gt;</span> This is the first Step <span class="nt">&lt;/h1&gt;</span>
@@ -80,7 +80,7 @@
 
 <p>Initialize with:</p>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#your-steps-container'</span><span class="p">).</span><span class="nx">simpleSteps</span><span class="p">();</span>
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#steps-container'</span><span class="p">).</span><span class="nx">simpleSteps</span><span class="p">();</span>
 </pre></div>
 
 <h2>
@@ -99,15 +99,15 @@
 <h2>
 <a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
 
-<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#your-steps-container'</span><span class="p">).</span><span class="nx">simpleSteps</span><span class="p">({</span>
+<div class="highlight highlight-javascript"><pre><span class="nx">$</span><span class="p">(</span><span class="s1">'#steps-container'</span><span class="p">).</span><span class="nx">simpleSteps</span><span class="p">({</span>
 
-                                          <span class="nx">animationSpeed</span>      <span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
-                                          <span class="nx">nextButtons</span>         <span class="o">:</span> <span class="s1">'.next-step-button'</span><span class="p">,</span>
-                                          <span class="nx">prevButtons</span>         <span class="o">:</span> <span class="s1">'.prev-step-button'</span><span class="p">,</span>
-                                          <span class="nx">stepClass</span>           <span class="o">:</span> <span class="s1">'.step'</span><span class="p">,</span>
-                                          <span class="nx">stepToStart</span>         <span class="o">:</span> <span class="mi">0</span>
+                                    <span class="nx">animationSpeed</span>      <span class="o">:</span> <span class="mi">500</span><span class="p">,</span>
+                                    <span class="nx">nextButtons</span>         <span class="o">:</span> <span class="s1">'.next-step-button'</span><span class="p">,</span>
+                                    <span class="nx">prevButtons</span>         <span class="o">:</span> <span class="s1">'.prev-step-button'</span><span class="p">,</span>
+                                    <span class="nx">stepClass</span>           <span class="o">:</span> <span class="s1">'.step'</span><span class="p">,</span>
+                                    <span class="nx">stepToStart</span>         <span class="o">:</span> <span class="mi">0</span>
 
-                                       <span class="p">});</span>
+                                    <span class="p">});</span>
 
 </pre></div>
 
